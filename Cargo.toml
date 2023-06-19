@@ -1,0 +1,26 @@
+[package]
+name = "kevlar"
+version = "1.0.0"
+authors = ["kohorstlucas@gmail.com"]
+description = "This is a Rust crate to interact with the Vault plugin that allows for the creation of EVM accounts and signing of transactions using those accounts. Contact Support:  Name: @kevlarxyz  Email: support@kevlar.xyz"
+# Override this license by providing a License Object in the kevlar.
+license = "Unlicense"
+edition = "2018"
+
+[dependencies]
+serde = { version = "1.0.0", features = ["derive"] }
+serde_json = "^1.0"
+url = "^2.2"
+uuid = { version = "^1.0", features = ["serde"] } 
+
+[dependencies.reqwest]
+version = "^0.11"
+features = ["json", "multipart"]
+
+[dev-dependencies]
+tokio = { version = "1.14.0", features = ["full"] }
+ethers = "2.0.7"
+
+[[example]]
+name = "create_account"
+path = "examples/create_account.rs"
