@@ -17,6 +17,17 @@ Put the package under your project folder in a directory named `kevlar` and add 
 kevlar = { path = "./kevlar" }
 ```
 
+## Contributing
+We use various `.githooks` to maintain our codebase, docs, and wiki
+
+Getting started with git hooks
+```bash
+git config core.hooksPath .githooks
+chmod +x .githooks/*
+```
+
+- `Wiki Sync Hook` will sync the wiki with the `docs` directory on every commit
+
 ## Documentation for API Endpoints
 
 All URIs are relative to *https://localhost:9200/v1/vault-ethereum* this can be changed in the configuration struct see `src/api/configuration.rs` for the default value.
