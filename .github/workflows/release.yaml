@@ -1,0 +1,34 @@
+name: Rust Release
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  release:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+
+      - name: Set up Rust
+        uses: actions-rs/toolchain@v1
+        with:
+          toolchain: stable
+
+      - name: Build release binary
+        run: cargo build --release
+
+      - name: Create release
+        uses: softprops/action-gh-release@v1
+        with:
+          files: target/release/kevlar-rs
+          tag_name: v1.0.0
+          title: Release v1.0.0
+          body: |
+            This is a Rust library for interfacing with the Vault plugin that allows for the creation of EVM accounts and signing of transactions using those accounts. This is the first release of the library and is not yet ready for production use.
+
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}

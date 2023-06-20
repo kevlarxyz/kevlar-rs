@@ -1,4 +1,4 @@
-use kevlar::apis::{account_name_api::createanaccount, configuration::Configuration};
+use kevlar_rs::apis::{account_name_api::createanaccount, configuration::Configuration};
 
 use serde_json::Value;
 

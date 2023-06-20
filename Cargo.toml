@@ -1,5 +1,5 @@
 [package]
-name = "kevlar"
+name = "kevlar-rs"
 version = "1.0.0"
 authors = ["kohorstlucas@gmail.com"]
 description = "This is a Rust crate to interact with the Vault plugin that allows for the creation of EVM accounts and signing of transactions using those accounts. Contact Support:  Name: @kevlarxyz  Email: support@kevlar.xyz"
