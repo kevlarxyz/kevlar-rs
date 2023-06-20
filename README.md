@@ -8,7 +8,6 @@ This library is providers rust bindings for interacting with the kevlar vault pl
 
 - API version: 1.0
 - Package version: 1.0
-- Build package: `org.kevlartools.codegen.languages.RustClientCodegen`
 
 ## Installation
 
